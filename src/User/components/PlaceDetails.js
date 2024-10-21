@@ -148,7 +148,7 @@ const PlaceDetails = () => {
               {place.photos.map((photo, index) => (
                 <div key={index}>
                   <img
-                    src={`http://localhost:8000/uploads/${photo}`}
+                    src={`https://propilistic-backend.vercel.app/uploads/${photo}`}
                     alt={`Slide ${index}`}
                     style={{ maxHeight: "650px" ,position:"cover"}} // Adjust the maxHeight to make the images smaller
                   />
