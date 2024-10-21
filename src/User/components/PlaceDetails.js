@@ -112,7 +112,7 @@ const PlaceDetails = () => {
     const fetchAdDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/getAdbyId/${_id}`
+          `https://propilistic-backend.vercel.app/api/getAdbyId/${_id}`
         );
         setPlace(response.data);
         setLoading(false);
