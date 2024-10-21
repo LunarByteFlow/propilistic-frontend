@@ -89,7 +89,7 @@ const PlacesPage = () => {
 
       // Wait for the POST request to complete
       const response = await axios.post(
-        `http://localhost:8000/api/places`,
+        `https://propilistic-backend.vercel.app/api/places`,
         placesData
       );
 
@@ -108,7 +108,7 @@ const PlacesPage = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/getAllplaces"
+          "https://propilistic-backend.vercel.app/api/getAllplaces"
         );
         setPlaces(response.data);
       } catch (error) {
