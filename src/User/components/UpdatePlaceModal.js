@@ -73,7 +73,7 @@ const UpdatePlaceModal = ({ isOpen, onRequestClose, onUpdatePlace }) => {
 
       // Wait for the POST request to complete
       const response = await axios.post(
-        `http://localhost:8000/api/auth/UpdateAdbyId/${_id}`,
+        `https://propilistic-backend.vercel.app/api/auth/UpdateAdbyId/${_id}`,
         placesData
       );
 
@@ -90,7 +90,7 @@ const UpdatePlaceModal = ({ isOpen, onRequestClose, onUpdatePlace }) => {
   const placePhotoByLink = async (e) => {
     e.preventDefault();
     const { data } = await axios.post(
-      "http://localhost:8000/api//upload-by-link",
+      "https://propilistic-backend.vercel.app/api/upload-by-link",
 
       { Link: photoLink, headers: { "Content-Type": "application/json" } }
     );
@@ -183,7 +183,7 @@ const UpdatePlaceModal = ({ isOpen, onRequestClose, onUpdatePlace }) => {
                       {/* `http://localhost:8000/api/uploads/` */}
                       <img
                         className="rounded-2xl"
-                        src={`http://localhost:8000/api/uploads/${Link}`}
+                        src={`https://propilistic-backend.vercel.app/api/uploads/${Link}`}
                         alt="loading..."
                       />
                     </div>
