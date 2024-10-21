@@ -74,7 +74,7 @@ const RegisterUser = () => {
       password: password,
     };
     console.log(payload)
-    axios.post(`https://propilistic-backend.vercel.app/createUser`, payload).then((json) => {
+    axios.post(`https://propilistic-backend.vercel.app/api/createUser`, payload).then((json) => {
       const payload2 = {
         name: json.data.name,
         email: json.data.email,
