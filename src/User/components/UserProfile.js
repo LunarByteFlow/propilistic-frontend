@@ -13,7 +13,7 @@ const UserProfile = () => {
     const fetchUserData = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('http://localhost:8000/api/getuser');
+        const response = await axios.get('https://propilistic-backend.vercel.app/api/getuser');
         setUser(response.data);
         setLoading(false);
       } catch (error) {
